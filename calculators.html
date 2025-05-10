@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Ensures the content spans the entire viewport height */
+    }
+    
+   .container {
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center; 
+    }
+    
+    h1 {
+      font-size: 1.8em;
+      text-align: center;
+      color: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 4px double;
+      border-image-source: linear-gradient(to right, #e76f51, #2a9d8f);
+      border-image-slice: 1;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 0 auto; /* Ensures heading is centered horizontally */
+    }
+    label {
+      
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    #result {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 1.4em;
+        color: white;
+        background-color: #f2a22a; /* Green background for visibility */
+        border-radius: 5px;
+        text-align: center;
+      }
+
+    .height-weight-wrapper,
+    .neck-waist-wrapper {
+        display: flex;  /* Use flexbox to align items horizontally */
+        justify-content: center;  /* Center the items horizontally */
+        align-items: center;  /* Center the items vertically */
+        width: 100%;  /* Ensure it takes up full width of the container */
+    }
+    
+    .height-weight-wrapper div,
+    .neck-waist-wrapper div {
+        display: flex;
+        flex-direction: column;  /* Stack label and input vertically */
+        align-items: center;  /* Center the label and input horizontally */
+        width: 48%;  /* Adjust the width of each field */
+        margin: 0 10px;  /* Add space between the fields */
+    }
+    
+    .height-weight-wrapper label,
+    .neck-waist-wrapper label {
+        margin-bottom: 8px;  /* Space between label and input */
+        font-weight: bold;
+        text-align: center;  /* Center the label text */
+    }
+    
+    .height-weight-wrapper input,
+    .neck-waist-wrapper input {
+        width: 100%;  /* Ensure the input takes up the full width of its container */
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid red;  /* Red line for input border */
+        border-radius: 0;
+        text-align: center;  /* Center the text inside the input */
+    }
+    
+    
+    
+      /* Make each input (height and weight) take 45% of the width */
+
+ /* Centering the container */
+ .center-container {
+    display: flex;               /* Use flexbox */
+    flex-direction: column;      /* Stack the label and input vertically */
+    justify-content: center;     /* Horizontally center the content */
+    align-items: center;         /* Vertically center the content */
+    height: 100%;                /* Set container height to 100% of its parent */
+    min-height: 100px;           /* Minimum height to prevent collapse */
+    margin: 0;
+    padding: 10px 0;             /* Optional: Add some padding to top and bottom */
+  }
+  
+  /* Style the label */
+  .center-container label {
+    margin-bottom: 5px;          /* Space between label and input */
+    font-weight: bold;
+    text-align: center;          /* Center the label text */
+  }
+  
+/* Adjust the width of the Age input to be slightly smaller */
+.center-container input#age {
+    width: 31%;  /* Adjust the width to make it a little smaller */
+  }
+  
+  /* Keep the other inputs at 50% width */
+  .center-container input,
+  .center-container select {
+    width: 50%;  /* Other inputs will maintain 50% width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+    text-align: center;
+  }
+  
+
+    /* Updated Input Style */
+    input[type="number"], select {
+        width: 50%; /* Set the width to 50% of the container */
+        max-width: 200px; /* Optional: Set a maximum width to prevent it from getting too large */
+        padding: 8px;
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 2px solid black;
+        border-radius: 0;
+      }
+      .gender-checkbox {
+        display: flex;               /* Use flexbox to align items */
+        justify-content: center;     /* Center the items horizontally */
+        gap:200px;                   /* Small space between the radio buttons */
+        margin-bottom: 15px;         /* Space between this and the next element */
+      }
+      
+      .gender-checkbox input {
+        margin-right: 5px;           /* Slight space between the radio button and label */
+      }
+      .button-container {
+        display: flex;
+        justify-content: center; /* Centers the buttons horizontally */
+        align-items: center;    /* Aligns the buttons vertically */
+        flex-wrap: wrap;        /* Allows buttons to wrap to the next line if necessary */
+        gap: 10px;              /* Adds spacing between buttons */
+        width: 100%;            /* Ensures it takes up the full width of the parent container */
+        margin-top: 20px;       /* Adds some space above the button container */
+    }
+    
+      .button {
+        border: 2px solid transparent;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 10px;
+        transition-duration: 0.4s;
+        border-radius: 5px;
+        outline: none;
+        background-color: white;
+      }
+      
+      .button.bmi { border-color: #e9c46a; }
+      .button.bmr { border-color: #e9c46a; }
+      .button.bodyFat { border-color: #e76f51; }
+      .button.idealWeight { border-color: #2a9d8f; }
+      .button.calories { border-color: #287271; }
+      
+      .button:hover {
+        color: white;
+        background-color: transparent;
+      }
+      
+      .button.bmi:hover { background-color: #e9c46a; }
+      .button.bmr:hover { background-color: #e9c46a; }
+      .button.bodyFat:hover { background-color: #e76f51;}
+      .button.idealWeight:hover { background-color: #2a9d8f; }
+      .button.calories:hover { background-color: #287271; }
+    
+      
+   
+        /* Footer Styling */
+        footer {
+          background-color: #002a38;
+          color: white;
+          text-align: center;
+          padding: 10px;
+      }
+
+      footer ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+      }
+
+      footer ul li {
+          position: relative;
+      }
+
+      footer ul li p {
+          margin: 0;
+          font-size: 1.5rem;
+          animation: wave-animation 0.3s infinite;
+      }
+
+      footer ul li:hover ~ li p {
+          animation: none;
+      }
+      a {
+          color: white;
+          text-decoration: none;
+          box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+      }
+
+      a:hover {
+          box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+      }
+
+      @keyframes wave-animation {
+          0%, 100% {
+              transform: rotate(0deg);
+          }
+          25% {
+              transform: rotate(20deg);
+          }
+          75% {
+              transform: rotate(-15deg);
+          }
+      }
+
+  </style>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+</head>
+<div class="container">
+  <h1>Health Calculator</h1>
+  <form id="healthForm">
+    <div class="center-container">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+    
+    <div class="gender-checkbox">
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label><input type="radio" name="gender" value="Female" required> Female</label>
+    </div>
+    
+    <div class="height-weight-wrapper">
+      <div>
+          <label for="heightCm">Height (cm):</label>
+          <input type="number" id="heightCm" name="heightCm" required>
+      </div>
+      <div>
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" required>
+      </div>
+  </div>
+  
+    
+    <div class="neck-waist-wrapper">
+        <div>
+            <label for="neck">Neck (Inches):</label>
+            <input type="number" id="neck" name="neck" required>
+        </div>
+        <div>
+            <label for="waist">Waist (Inches):</label>
+            <input type="number" id="waist" name="waist" required>
+        </div>
+    </div>
+    
+    <div class="center-container">
+        <label for="activityLevel">Activity Level:</label>
+        <select id="activityLevel">
+          <option value="Sedentary">Sedentary</option>
+          <option value="Lightly Active">Lightly Active</option>
+          <option value="Moderately Active">Moderately Active</option>
+          <option value="Very Active">Very Active</option>
+          <option value="Super Active">Super Active</option>
+        </select>
+      </div>
+      
+      <div style="height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <div class="button-container">
+            <button type="button" id="bmi" class="button bmi">BMI</button>
+            <button type="button" id="bmr" class="button bmr">BMR</button>
+            <button type="button" id="bodyFat" class="button bodyFat">Body Fat</button>
+            <button type="button" id="idealWeight" class="button idealWeight">Ideal Weight</button>
+            <button type="button" id="calories" class="button calories">Calories</button>
+        </div>
+    </div>
+    <div id="result" style="display: none;"></div>
+    <section class="info-section" style="margin-top: 20px; padding: 20px; text-align: center; background: #f0f4f8; border-radius: 10px;">
+        <h2 style="margin-bottom: 10px; color: #2a9d8f;">Understanding the Metrics</h2>
+        <p style="font-size: 1.2em; color: #555;">This health calculator provides detailed insights into your body's health status:</p>
+        <ul style="list-style: none; padding: 0; font-size: 1em; color: #444; text-align: left; max-width: 600px; margin: 0 auto;">
+            <li><strong>BMI:</strong> Body Mass Index indicates your weight status.</li>
+            <li><strong>BMR:</strong> Basal Metabolic Rate shows the calories burned at rest.</li>
+            <li><strong>Body Fat:</strong> Calculates fat percentage based on body measurements.</li>
+            <li><strong>Ideal Weight:</strong> Suggests a healthy weight range based on your height and gender.</li>
+            <li><strong>Calories:</strong> Provides daily calorie needs based on your activity level.</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <ul>
+            <li><a href="aboutus.html"><ion-icon name="information-circle-outline"></ion-icon> About Us</a></li>
+        <li><a href="contact us.html"><ion-icon name="call-outline"></ion-icon> Contact Us</a></li>
+        <li><a href="FAQ.html"><ion-icon name="help-circle-outline"></ion-icon> FAQs</a></li>
+        <li><a href="main.html"><ion-icon name="home-outline"></ion-icon> Calories Coach</a></li>
+            <li><p>👋</p></li>
+        </ul>
+    </footer>
+    
+  </form>
+  
+  
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const resultDiv = document.getElementById('result');
+
+      // BMI Calculator
+      function calculateBMI(weight, heightCm) {
+          const heightMeters = heightCm / 100;
+          return (weight / (heightMeters ** 2)).toFixed(2);
+      }
+
+      // BMR Calculator
+      function calculateBMR(age, gender, weight, heightCm) {
+          if (gender === "Male") {
+              return (88.362 + (13.397 * weight) + (4.799 * heightCm) - (5.677 * age)).toFixed(2);
+          } else {
+              return (447.593 + (9.247 * weight) + (3.098 * heightCm) - (4.330 * age)).toFixed(2);
+          }
+      }
+
+      // Body Fat Calculator
+      function calculateBodyFat(gender, weight, heightCm, neck, waist) {
+          const neckCm = neck * 2.54;
+          const waistCm = waist * 2.54;
+
+          let bodyFatPercentage;
+          if (gender === "Male") {
+              bodyFatPercentage = (86.010 * Math.log10(waistCm - neckCm)) - 
+                                  (70.041 * Math.log10(heightCm)) + 36.76;
+          } else {
+              bodyFatPercentage = (163.205 * Math.log10(waistCm + neckCm)) - 
+                                  (97.684 * Math.log10(heightCm)) - 78.387;
+          }
+          return bodyFatPercentage.toFixed(2);
+      }
+
+      // Ideal Weight Calculator
+      function calculateIdealWeight(heightCm, gender) {
+          let idealWeight;
+          if (gender === "Male") {
+              idealWeight = 50 + 0.9 * (heightCm - 152);
+          } else {
+              idealWeight = 45.5 + 0.9 * (heightCm - 152);
+          }
+          return idealWeight.toFixed(2);
+      }
+
+      // Calories Calculator
+      function calculateCalories(age, gender, weight, heightCm, activityLevel) {
+          let bmr = 0;
+          if (gender === "Male") {
+              bmr = 88.362 + (13.397 * weight) + (4.799 * heightCm) - (5.677 * age);
+          } else {
+              bmr = 447.593 + (9.247 * weight) + (3.098 * heightCm) - (4.330 * age);
+          }
+
+          let activityFactor;
+          switch(activityLevel) {
+              case "Sedentary":
+                  activityFactor = 1.2;
+                  break;
+              case "Lightly Active":
+                  activityFactor = 1.375;
+                  break;
+              case "Moderately Active":
+                  activityFactor = 1.55;
+                  break;
+              case "Very Active":
+                  activityFactor = 1.725;
+                  break;
+              case "Super Active":
+                  activityFactor = 1.9;
+                  break;
+              default:
+                  activityFactor = 1.2;
+          }
+          return (bmr * activityFactor).toFixed(2);
+      }
+
+      // Event Listeners
+      document.getElementById('bmi').addEventListener('click', function() {
+          const weight = parseFloat(document.getElementById('weight').value);
+          const heightCm = parseFloat(document.getElementById('heightCm').value);
+          if (weight && heightCm) {
+              const bmi = calculateBMI(weight, heightCm);
+              resultDiv.style.display = 'block';
+              resultDiv.textContent = `BMI: ${bmi}`;
+          } else {
+              alert("Please enter valid values for weight and height.");
+          }
+      });
+
+      document.getElementById('bmr').addEventListener('click', function() {
+          const age = parseInt(document.getElementById('age').value);
+          const gender = document.querySelector('input[name="gender"]:checked')?.value;
+          const weight = parseFloat(document.getElementById('weight').value);
+          const heightCm = parseFloat(document.getElementById('heightCm').value);
+          if (age && gender && weight && heightCm) {
+              const bmr = calculateBMR(age, gender, weight, heightCm);
+              resultDiv.style.display = 'block';
+              resultDiv.textContent = `BMR: ${bmr}`;
+          } else {
+              alert("Please enter valid values for all fields.");
+          }
+      });
+
+      document.getElementById('bodyFat').addEventListener('click', function() {
+          const gender = document.querySelector('input[name="gender"]:checked')?.value;
+          const weight = parseFloat(document.getElementById('weight').value);
+          const heightCm = parseFloat(document.getElementById('heightCm').value);
+          const neck = parseFloat(document.getElementById('neck').value);
+          const waist = parseFloat(document.getElementById('waist').value);
+          if (gender && weight && heightCm && neck && waist) {
+              const bodyFat = calculateBodyFat(gender, weight, heightCm, neck, waist);
+              resultDiv.style.display = 'block';
+              resultDiv.textContent = `Body Fat Percentage: ${bodyFat}%`;
+          } else {
+              alert("Please enter valid values for all fields.");
+          }
+      });
+
+      document.getElementById('idealWeight').addEventListener('click', function() {
+          const heightCm = parseFloat(document.getElementById('heightCm').value);
+          const gender = document.querySelector('input[name="gender"]:checked')?.value;
+          if (heightCm && gender) {
+            const idealWeight = calculateIdealWeight(heightCm, gender);
+            resultDiv.style.display = 'block';
+            resultDiv.textContent = `Ideal Weight: ${idealWeight} kg`;
+        } else {
+            alert("Please enter valid values for height and select a gender.");
+        }
+    });
+
+    document.getElementById('calories').addEventListener('click', function() {
+        const age = parseInt(document.getElementById('age').value);
+        const gender = document.querySelector('input[name="gender"]:checked')?.value;
+        const weight = parseFloat(document.getElementById('weight').value);
+        const heightCm = parseFloat(document.getElementById('heightCm').value);
+        const activityLevel = document.getElementById('activityLevel').value;
+        if (age && gender && weight && heightCm && activityLevel) {
+            const calories = calculateCalories(age, gender, weight, heightCm, activityLevel);
+            resultDiv.style.display = 'block';
+            resultDiv.textContent = `Calories Needed Per Day: ${calories} kcal`;
+        } else {
+            alert("Please enter valid values for all fields.");
+        }
+    });
+});
+</script>
+
+
+
+</body>
+</html>

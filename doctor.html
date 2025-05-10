@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicare - Calories Coach</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #333;
+  }
+  
+  /* Header and Navigation Bar */
+  header {
+    background-color: #2594a3;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+
+  nav ul li a:hover {
+    color: #e74c3c;
+    border-bottom: 2px solid #e74c3c;
+  }
+  
+  /* Medicare Section */
+  #medicare {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #medicare h2 {
+    color: #2594a3;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  #medicare p {
+    line-height: 1.6;
+  }
+  
+  .info-box {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-box h3 {
+    color: #2594a3;
+  }
+  
+  .cta {
+    text-align: center;
+  }
+  
+  .cta button {
+    background-color: #2594a3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta button:hover {
+    background-color: #e74c3c;
+  }
+  
+  .cta a {
+    color: white;
+    text-decoration: none;
+  }
+  
+     /* Footer Styling */
+     footer {
+        background-color: #002a38;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer ul li {
+        position: relative;
+    }
+
+    footer ul li p {
+        margin: 0;
+        font-size: 1.5rem;
+        animation: wave-animation 0.3s infinite;
+    }
+
+    footer ul li:hover ~ li p {
+        animation: none;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+    }
+
+    a:hover {
+        box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+    }
+
+    @keyframes wave-animation {
+        0%, 100% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(20deg);
+        }
+        75% {
+            transform: rotate(-15deg);
+        }
+    }
+  
+</style>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<body>
+  <header>
+    <h1>Calories Coach Medicare</h1>
+   
+  </header>
+
+  <section id="medicare">
+    <h2>Medicare for a Healthy Future</h2>
+    <p>Medicare is a valuable health insurance program that provides financial support for medical needs, helping you maintain a healthier lifestyle. As part of your journey to better health, understanding your insurance options can help you make informed decisions about your healthcare.</p>
+    
+    <!-- Video Embed -->
+    <div class="video-container" style="text-align: center; margin: 2rem 0;">
+      <video controls width="80%">
+        <source src="medicare.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="info-box">
+      <h3>What is Medicare?</h3>
+      <p>Medicare is a federal health insurance program for people aged 65 and older, and for some younger people with disabilities. It helps cover various medical services, including hospital care, medical services, and prescription drugs.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>How Medicare Helps You?</h3>
+      <p>Medicare helps you stay healthy by providing essential services such as routine checkups, medication coverage, and hospital visits. This is especially important for those managing chronic conditions like diabetes, hypertension, and other health concerns.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>How to Apply for Medicare?</h3>
+      <p>You can apply for Medicare when you turn 65. To apply, you can visit the official Medicare website or consult with a Medicare representative. You can also apply online through your Social Security account.</p>
+    </div>
+
+    <div class="cta">
+      <p>Don't let medical costs affect your fitness journey. Learn more about Medicare and secure your health today!</p>
+      <button><a href="https://www.medicare.gov" target="_blank">Visit Medicare Official Site</a></button>
+    </div>
+  </section>
+
+  <footer>
+    <ul>
+        <li><a href="aboutus.html"><ion-icon name="information-circle-outline"></ion-icon> About Us</a></li>
+        <li><a href="contact us.html"><ion-icon name="call-outline"></ion-icon> Contact Us</a></li>
+        <li><a href="FAQ.html"><ion-icon name="help-circle-outline"></ion-icon> FAQs</a></li>
+        <li><a href="main.html"><ion-icon name="home-outline"></ion-icon> Calories Coach</a></li>
+        <li><p>👋</p></li>
+    </ul>
+</footer>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Pakistani Recipes</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+      color: #333;
+    }
+    header {
+      background:  #2594a3;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    section h2 {
+      background:  #2594a3;
+      color: #fff;
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .recipe {
+      padding: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .recipe:last-child {
+      border-bottom: none;
+    }
+    .recipe h3 {
+      color:   #2594a3;
+      margin: 0 0 0.5rem;
+    }
+    .recipe p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+    .recipe img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 1rem 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .recipe .benefits {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+    
+      /* Navigation Bar Styling */
+      nav {
+        margin-top: 20px;
+        background-color: #2c3e50;
+        border-radius: 10px;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+   /* Navigation Bar Styling */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none; /* Ensure no box-shadow */
+    text-shadow: none; /* Ensure no text-shadow */
+}
+
+nav ul li a:hover {
+    color: #e74c3c; /* Change text color on hover */
+    border-bottom: 2px solid #e74c3c; /* Add underline effect */
+    box-shadow: none; /* Ensure no shadow on hover */
+}
+   
+        /* Footer Styling */
+        footer {
+          background-color: #002a38;
+          color: white;
+          text-align: center;
+          padding: 10px;
+      }
+
+      footer ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+      }
+
+      footer ul li {
+          position: relative;
+      }
+
+      footer ul li p {
+          margin: 0;
+          font-size: 1.5rem;
+          animation: wave-animation 0.3s infinite;
+      }
+
+      footer ul li:hover ~ li p {
+          animation: none;
+      }
+      a {
+          color: white;
+          text-decoration: none;
+          box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+      }
+
+      a:hover {
+          box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+      }
+
+      @keyframes wave-animation {
+          0%, 100% {
+              transform: rotate(0deg);
+          }
+          25% {
+              transform: rotate(20deg);
+          }
+          75% {
+              transform: rotate(-15deg);
+          }
+      }
+
+        /* Add this to the existing styles */
+        .recipe img {
+          max-width: 300px; /* Adjust the width as needed */
+          height: auto;
+          display: block;
+          margin: 1rem auto; /* Center the image */
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+      
+  </style>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Healthy Pakistani Recipes</h1>
+  </header>
+  <nav>
+    <ul>
+        <li><a href="#Breakfast">Breakfast</a></li>
+        <li><a href="#Lunch">Lunch</a></li>
+        <li><a href="#Dinner">Dinner</a></li>
+        <li><a href="#Snacks">Snacks</a></li>
+        </ul>
+</nav>
+
+
+  <section id = "Breakfast">
+    <h2>Breakfast</h2>
+    <div class="recipe">
+      <h3>Anda Paratha Roll</h3>
+      <img src="Anda Paratha Roll.jpg" alt="Anda Paratha Roll">
+      <p><strong>Recipe:</strong> Prepare a whole wheat paratha and fill it with a spiced egg omelette. Roll it up and serve with yogurt dip.</p>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <p>Rich in protein and carbs, this breakfast provides sustained energy for a productive morning.</p>
+      </div>
+    </div>
+    <div class="recipe">
+      <h3>Multigrain Porridge</h3>
+      <img src="Multigrain Porridge.jpg" alt="Multigrain Porridge">
+      <p><strong>Recipe:</strong> Cook a blend of oats, barley, and quinoa with milk. Top with dry fruits and a drizzle of honey.</p>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <p>High in fiber and nutrients, it supports digestion and keeps you full for longer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id ="Lunch">
+    <h2>Lunch</h2>
+    <div class="recipe">
+      <h3>Grilled Chicken</h3>
+      <img src="Grilled Chicken.jpg" alt="Grilled Chicken">
+      <p><strong>Recipe:</strong> Marinate chicken in spices, grill until tender, and serve with steamed vegetables and whole wheat roti.</p>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <p>A high-protein meal that aids muscle growth and provides essential vitamins from vegetables.</p>
+      </div>
+    </div>
+    <div class="recipe">
+      <h3>Daal Chawal</h3>
+      <img src="Daal Chawal.jpg" alt="Daal Chawal">
+      <p><strong>Recipe:</strong> Cook lentils with onions, tomatoes, and spices. Serve with steamed basmati rice and a side salad.</p>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <p>A comforting and balanced meal rich in plant-based protein and complex carbs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="Dinner">
+    <h2>Dinner</h2>
+    <div class="recipe">
+      <h3>Grilled Fish</h3>
+      <img src="Grilled Fish.jpg" alt="Grilled Fish">
+      <p><strong>Recipe:</strong> Marinate fish with lemon, garlic, and spices. Grill and serve with sautéed spinach.</p>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <p>Low in fat and high in omega-3 fatty acids, ideal for heart health and brain function.</p>
+      </div>
+    </div>
+    <div class="recipe">
+      <h3>Chicken Soup</h3>
+      <img src="Chicken Soup.jpg" alt="Chicken Soup">
+      <p><strong>Recipe:</strong> Simmer chicken with carrots, celery, and onions in a flavorful broth. Add herbs for extra taste.</p>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <p>A light yet filling option, perfect for boosting immunity and aiding digestion.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="Snacks">
+    <h2>Snacks</h2>
+    <div class="recipe">
+      <h3>Roasted Chickpeas</h3>
+      <img src="Roasted Chickpeas.jpg" alt="Roasted Chickpeas">
+      <p><strong>Recipe:</strong> Toss boiled chickpeas with olive oil, salt, and spices. Roast in the oven until crispy.</p>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <p>Rich in protein and fiber, this snack helps in weight management and keeps you energized.</p>
+      </div>
+    </div>
+    <div class="recipe">
+      <h3>Fresh Fruit Salad</h3>
+      <img src="Fresh Fruit Salad.jpg" alt="Fresh Fruit Salad">
+      <p><strong>Recipe:</strong> Chop seasonal fruits and toss them with a sprinkle of chaat masala.</p>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <p>A refreshing and hydrating snack packed with natural vitamins and antioxidants.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <ul>
+      <li><a href="aboutus.html"><ion-icon name="information-circle-outline"></ion-icon> About Us</a></li>
+      <li><a href="contact us.html"><ion-icon name="call-outline"></ion-icon> Contact Us</a></li>
+      <li><a href="FAQ.html"><ion-icon name="help-circle-outline"></ion-icon> FAQs</a></li>
+      <li><a href="main.html"><ion-icon name="home-outline"></ion-icon> Calories Coach</a></li>
+        <li><p>👋</p></li>
+    </ul>
+</footer>
+</body>
+</html>

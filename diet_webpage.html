@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanced Diet and Nutrition</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #1d7ab5;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+      /* Navigation Bar Styling */
+      nav {
+        margin-top: 20px;
+        background-color: #2c3e50;
+        border-radius: 10px;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+   /* Navigation Bar Styling */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none; /* Ensure no box-shadow */
+    text-shadow: none; /* Ensure no text-shadow */
+}
+
+nav ul li a:hover {
+    color: #e74c3c; /* Change text color on hover */
+    border-bottom: 2px solid #e74c3c; /* Add underline effect */
+    box-shadow: none; /* Ensure no shadow on hover */
+}
+
+        
+        /* Main Section */
+        main {
+            margin-bottom: 30px;
+        }
+
+        /* Benefits Section */
+        .info-section {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .info-section h2 {
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            color: #146191;
+        }
+
+        .info-section ul {
+            list-style-type: disc;
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .info-section ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Image Styling */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #002a38;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer ul li {
+            position: relative;
+        }
+
+        footer ul li p {
+            margin: 0;
+            font-size: 1.5rem;
+            animation: wave-animation 0.3s infinite;
+        }
+
+        footer ul li:hover ~ li p {
+            animation: none;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+        }
+
+        a:hover {
+            box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+        }
+
+        @keyframes wave-animation {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(20deg);
+            }
+            75% {
+                transform: rotate(-15deg);
+            }
+        }
+
+        .references {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .references h2 {
+            font-size: 1.6em;
+            color: #146191;
+        }
+
+        .references ul {
+            list-style-type: none;
+            margin: 15px 0;
+            padding-left: 0;
+        }
+
+        .references ul li {
+            margin-bottom: 10px;
+        }
+
+        .references a {
+            color: #1e73be;
+            text-decoration: none;
+        }
+
+        .references a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Balanced Diet and Nutrition</h1>
+        <p>Essential guide for a healthy lifestyle</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#what-is-balanced-diet">What is a Balanced Diet?</a></li>
+            <li><a href="#key-components">Key Components</a></li>
+            <li><a href="#hydration">Hydration</a></li>
+            <li><a href="#health-benefits">Health Benefits</a></li>
+            <li><a href="#food-groups">Food Groups</a></li>
+            <li><a href="#meal-timing">Meal Timing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="what-is-balanced-diet" class="info-section">
+            <h2>What is a Balanced Diet?</h2>
+            <p>A balanced diet is one that provides all the essential nutrients required for health and growth. It includes a variety of foods from different food groups in the right proportions.</p>
+            <div class="image-container">
+                <img src="diet.jpg" alt="Balanced Diet"style="width: 50%; max-width: 800px; height: auto;">
+            </div>
+        </section>
+
+        <section id="key-components" class="info-section">
+            <h2>Key Components of a Balanced Diet</h2>
+            <ul>
+                <li>Carbohydrates for energy</li>
+                <li>Proteins for growth and repair</li>
+                <li>Fats for energy and to support cell structure</li>
+                <li>Vitamins and minerals to support various body functions</li>
+                <li>Water to hydrate the body</li>
+            </ul>
+            <div class="image-container">
+                <img src="health4.jpg" alt="Health Components"style="width: 50%; max-width: 800px; height: auto;">
+            </div>
+        </section>
+
+        <section id="hydration" class="info-section">
+            <h2>Importance of Hydration</h2>
+            <p>Water plays a vital role in maintaining the body's temperature, transporting nutrients, and eliminating waste. It's essential to drink sufficient water daily for overall health.</p>
+            <div class="image-container">
+                <img src="pic7.jpg" alt="Hydration"style="width: 50%; max-width: 800px; height: auto;">
+            </div>
+        </section>
+
+        <section id="health-benefits" class="info-section">
+            <h2>Health Benefits of a Balanced Diet</h2>
+            <ul>
+                <li>Improved immunity</li>
+                <li>Better digestion</li>
+                <li>Increased energy levels</li>
+                <li>Weight management</li>
+                <li>Reduced risk of chronic diseases</li>
+            </ul>
+        </section>
+
+        <section id="food-groups" class="info-section">
+            <h2>Food Groups in a Balanced Diet</h2>
+            <ul>
+                <li>Fruits and vegetables</li>
+                <li>Whole grains and cereals</li>
+                <li>Proteins (meat, fish, legumes)</li>
+                <li>Dairy products</li>
+                <li>Healthy fats (olive oil, nuts)</li>
+            </ul>
+        </section>
+
+        <section id="meal-timing" class="info-section">
+            <h2>Importance of Meal Timing</h2>
+            <p>Proper meal timing helps regulate metabolism, maintain energy levels, and avoid overeating. It is important to have balanced meals throughout the day.</p>
+        </section>
+
+        <!-- References Section -->
+        <section class="references">
+            <h2>References</h2>
+            <ul>
+                <li><a href="https://www.nutrition.org.uk/" target="_blank">Nutrition Society</a></li>
+                <li><a href="https://www.who.int/nutrition/" target="_blank">World Health Organization - Nutrition</a></li>
+                <li><a href="https://www.health.gov/dietaryguidelines/" target="_blank">Dietary Guidelines for Americans</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="aboutus.html"><ion-icon name="information-circle-outline"></ion-icon> About Us</a></li>
+            <li><a href="contact us.html"><ion-icon name="call-outline"></ion-icon> Contact Us</a></li>
+            <li><a href="FAQ.html"><ion-icon name="help-circle-outline"></ion-icon> FAQs</a></li>
+            <li><a href="main.html"><ion-icon name="home-outline"></ion-icon> Calories Coach</a></li>
+            <li><p>👋</p></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

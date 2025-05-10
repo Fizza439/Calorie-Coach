@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare Calories Coach</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #6aabd2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #6aabd2;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1200x400/?healthy-food') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #6aabd2;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-card {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #555;
+        }
+
+        /* Profiles Section */
+        .profiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .profile-card {
+            flex: 1 1 calc(25% - 20px);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .profile-card h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .profile-card p {
+            color: #555;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .profile-card a {
+            color: #6aabd2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .profile-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Medicare Calories Coach</h1>
+        <p>Your partner in maintaining a healthy lifestyle.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#profiles">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h2>Track Your Calories, Stay Healthy</h2>
+    </div>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>At Medicare Calories Coach, we focus on helping you understand and manage your daily caloric intake for a healthier and more energetic lifestyle. With personalized tools and expert advice, you can make informed decisions about your diet and well-being.</p>
+        </section>
+
+        <section id="features" class="section">
+            <h2>Our Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Calorie Tracker</h3>
+                    <p>Log your meals and monitor your daily caloric intake with ease.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Personalized Diet Plans</h3>
+                    <p>Get custom diet plans tailored to your fitness goals and health needs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Expert Guidance</h3>
+                    <p>Receive advice from certified nutritionists and dieticians.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profiles" class="section">
+            <h2>Our Team</h2>
+            <div class="profiles">
+                <div class="profile-card">
+                    <img src="https://source.unsplash.com/120x120/?person" alt="Member Image">
+                    <h3>Dr. Alice Johnson</h3>
+                    <p>Certified Nutritionist</p>
+                    <a href="#">View Profile</a>
+                </div>
+                <div class="profile-card">
+                    <img src="https://source.unsplash.com/120x120/?woman" alt="Member Image">
+                    <h3>Mark Smith</h3>
+                    <p>Fitness Coach</p>
+                    <a href="#">View Profile</a>
+                </div>
+                <div class="profile-card">
+                    <img src="https://source.unsplash.com/120x120/?man" alt="Member Image">
+                    <h3>Emily Davis</h3>
+                    <p>Dietician</p>
+                    <a href="#">View Profile</a>
+                </div>
+                <div class="profile-card">
+                    <img src="https://source.unsplash.com/120x120/?health" alt="Member Image">
+                    <h3>James Wilson</h3>
+                    <p>Health Advisor</p>
+                    <a href="#">View Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Email: support@caloriescoach.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Health Street, Wellness City, Fitland</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Medicare Calories Coach. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

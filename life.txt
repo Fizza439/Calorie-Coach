@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"><h2>Health Goals</h2>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+    <div class="container">    <label>Weight Goals: <select id="weightGoals">
+        <option value="loseWeight">Lose Weight</option>
+        <option value="gainWeight">Gain Weight</option>
+        <option value="maintainWeight">Maintain Weight</option>
+        </select>
+        </label>
+        <br/>
+        <br/></div>
+        <div class="container"><label>Fitness Goals: <input type="text" id="fitnessGoals"/></label>
+            <br/>
+            <br/></div>
+        
+        <div class="container"><label>Specific Health Goals: <input type="text" id="specificHealthGoals"/></label>
+            <br/>
+            <br/></div>
+            <div class="container"> <a href="eat.html"><button> Next</button></a></div>
+           
+</body>
+</html>

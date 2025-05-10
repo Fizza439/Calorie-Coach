@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calories Coach</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffff;
+    }
+
+    /* Sidebar styles */
+    #mySidenav .sideButton {
+      position: absolute;
+      left: -80px; /* Initially hidden to the left */
+      transition: 0.3s; /* Smooth transition when hovering */
+      padding: 15px;
+      width: 120px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      border-width: 0px;
+      z-index: 1; /* Ensure the buttons are on top */
+    }
+    
+    /* Hover effect */
+    #mySidenav .sideButton:hover {
+      left: 0; /* Move to the visible position on hover */
+    }
+    
+    /* Specific button positions */
+    #home {
+      top: 60px;
+      background-color: #e9c46a;
+      border-width: 0px;
+    }
+    
+    #aboutus {
+      top: 140px;
+      background-color: #f4a261;
+    }
+    
+    #target {
+      top: 220px;
+      background-color: #e76f51;
+    }
+    
+    #faqs {
+      top: 300px;
+      background-color: #2a9d8f;
+    }
+    
+    #contactus {
+      top: 380px;
+      background-color: #287271;
+    }
+    /* Page content */
+    .content {
+      margin-left: 140px;
+      padding: 20px;
+    }
+
+    .header {
+      background-color: #2594a3;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .intro {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Image transition styles */
+    .image-container {
+      text-align: center;
+      margin: 20px auto; /* Space around the image */
+      position: relative; /* Ensure proper stacking of content */
+    }
+
+    .image-container img {
+      width: 800px;
+      height: 400px;
+      border-radius: 10px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      display: block; /* Ensure the image takes up its full space */
+      margin: 0 auto;
+    }
+
+    /* Small round button styles */
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center buttons horizontally */
+      gap: 20px; /* Space between buttons */
+        margin-top: 60px; /* Add more space below the image */
+      }
+    
+
+    .small-round-button {
+      background-color: #fff;
+      border: 2px solid black;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative; /* Ensure proper positioning */
+      z-index: 1;
+    }
+
+    .small-round-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .small-round-button:hover .overlay {
+      opacity: 1;
+    }
+    /* Image Section Styles */
+.image-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px auto;
+}
+
+.image-card {
+  text-align: center;
+  width: 300px;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-card img:hover {
+  transform: scale(1.05);
+}
+
+.image-title {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #2594a3;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.image-title:hover {
+  color: #e76f51;
+}
+.about-us {
+  background-color: #2594a3; /* Background color */
+  color: white; /* Text color */
+  padding: 40px 20px;
+}
+
+.about-us h1, .about-us h2, .about-us h3 {
+  color: white; /* Highlight color for headings */
+}
+
+.about-us ul {
+  margin-left: 20px;
+}
+
+.about-us a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+ 
+  background-color: #ffb733;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.about-us a:hover {
+  background-color: #ffb733;
+}
+
+.about-us .quote {
+  font-style: italic;
+  color: #ddd;
+  margin: 20px 0;
+}
+
+    /* Designer Nameplate Styles */
+    .designer-section {
+      background-color: #e9c46a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .designer-card {
+      display: inline-block;
+      width: 200px;
+      margin: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .designer-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .designer-card h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+      color: #2594a3;
+    }
+
+    .designer-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer {
+      position: relative;
+      background-color: #002a38;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    footer ul li {
+      text-align: center;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #e76f51;
+    }
+
+    .footer-logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .footer-note {
+      font-size: 14px;
+      margin-top: 20px;
+    } </style>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+
+  <!-- Sidebar -->
+  <div id="mySidenav" class="sidenav">
+    <button id="home" class="sideButton">Home</button>
+    <button id="aboutus" class="sideButton">About Us</button>
+    <button id="target" class="sideButton">Target</button>
+    <button id="faqs" class="sideButton">FAQs</button>
+    <button id="contactus" class="sideButton">Contact Us</button>
+
+</div>
+
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Welcome to Calories Coach</h1>
+    <p>Your partner in maintaining a healthy lifestyle!</p>
+  </div>
+
+  <!-- Image with Transition -->
+  <div class="image-container">
+    <img id="slideshow" src="health5.jpg" alt="Health Tips">
+  </div>
+
+  <!-- Small Round Buttons -->
+  <div class="button-container">
+
+    <button class="small-round-button" id="calculatorButton">
+      <img src="calculator_img.jpg" alt="Calculator">
+      <div class="overlay">Calculator</div>
+    </button>
+
+    <button class="small-round-button" id="exerciseButton">
+      <img src="excercise.jpg" alt="Exercise">
+      <div class="overlay">Exercise</div>
+    </button>
+
+    <button class="small-round-button" id="dietButton">
+      <img src="diet.jpg" alt="Diet">
+      <div class="overlay">Diet</div>
+    </button>
+
+    <button class="small-round-button" id="sleepButton">
+      <img src="sleep.jpg" alt="Sleep">
+      <div class="overlay">Sleep</div>
+    </button>
+
+    <button class="small-round-button" id="medicareButton">
+      <img src="medicare.jpg" alt="Medicare">
+      <div class="overlay">Medicare</div>
+    </button>
+
+    <button class="small-round-button" id="recipesButton">
+      <img src="pic7.jpg" alt="Recipes">
+      <div class="overlay">Recipes</div>
+    </button>
+  </div>
+
+  <!-- After the button-container section -->
+<div class="image-section">
+  <div class="image-card">
+    <img src="mental.jpg" alt="Mental Health" />
+    <a href="research_sleep.html" class="image-title">Mental Health Related to Physical Health</a>
+  </div>
+  <div class="image-card">
+    <img src="yoga.jpg" alt="Yoga and Exercise" />
+    <a href="research_exercise.html" class="image-title">Yoga and Exercise</a>
+  </div>
+  <div class="image-card">
+    <img src="food.jpg" alt="Healthy Eating Habits" />
+    <a href="research_diet.html" class="image-title">Healthy Eating Habits</a>
+  </div>
+</div>
+
+
+  <script>
+    
+    // Array of image sources
+    const images = [
+      "pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "health4.jpg", "pic5.jpg",
+    ];
+
+    let currentIndex = 0;
+
+    // Function to change the image
+    function changeImage() {
+      const imgElement = document.getElementById("slideshow");
+      currentIndex = (currentIndex + 1) % images.length; // Loop back to start
+      imgElement.src = images[currentIndex];
+    }
+
+    // Set interval to change the image every 3 seconds
+    setInterval(changeImage, 3000);
+
+
+    // functionalities to change the page of round button click 
+
+    document.getElementById('calculatorButton').addEventListener('click',changeWindowCalculator);
+    document.getElementById('exerciseButton').addEventListener('click',changeWindowExercise);
+    document.getElementById('dietButton').addEventListener('click',changeWindowDiet);
+    document.getElementById('sleepButton').addEventListener('click',changeWindowSleep);
+    document.getElementById('medicareButton').addEventListener('click',changeWindowMedicare);
+    document.getElementById('recipesButton').addEventListener('click',changeWindowRecipe);
+
+    function changeWindowCalculator(){
+
+      window.location.href = "calculators.html";
+    }
+
+    function changeWindowExercise(){
+
+      window.location.href = "/exercise_button.html";
+    }
+
+    function changeWindowDiet(){
+
+      window.location.href = '/diet_webpage.html';
+    }
+
+    function changeWindowSleep(){
+
+      window.location.href = '/sleep_button.html';
+    }
+
+    function changeWindowMedicare(){
+
+      window.location.href = 'doctor.html';
+    }
+
+    function changeWindowRecipe(){
+      window.location.href = 'recipes.html';
+    }
+
+    // functionalities to change the page of Side button click 
+
+    document.getElementById('aboutus').addEventListener('click',aboutWindow);
+    document.getElementById('target').addEventListener('click',targetWindow);
+    document.getElementById('faqs').addEventListener('click',faqWindow);
+    document.getElementById('contactus').addEventListener('click',contactWindow);
+    
+    function aboutWindow(){
+
+      window.location.href = '/aboutus.html';
+    }
+
+    function targetWindow(){
+
+      window.location.href = 'Target.html';
+    }
+
+    function faqWindow(){
+
+      window.location.href = "/FAQ.html";
+    }
+
+    function contactWindow(){
+
+      window.location.href = '/contact us.html';
+    }
+
+
+
+  </script>
+  
+
+  <div class="designer-section">
+    <h2>Meet the Developers</h2>
+    <div class="designer-card">
+      <img src="designer3.jpg" alt="Designer 1">
+      <h3>Fizza Shoaib</h3>
+      <p>UI/UX Designer</p>
+    </div>
+    <div class="designer-card">
+      <img src="designer2.jpg" alt="Designer 2">
+      <h3>Noor E Sehar</h3>
+      <p>Frontend Developer</p>
+    </div>
+    <div class="designer-card">
+      <img src="designer1.jpg" alt="Designer 3">
+      <h3>M Faizan</h3>
+      <p>Graphic Designer</p>
+    </div>
+    <div class="designer-card">
+      <img src="designer4.jpg" alt="Designer 4">
+      <h3>Sajeela Tahir</h3>
+      <p>Backend Developer</p>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <img src="logo.jpg" alt="Calories Coach Logo" class="footer-logo">
+      <ul>
+        <li><a href="aboutus.html"><ion-icon name="information-circle-outline"></ion-icon> About Us</a></li>
+        <li><a href="contact us.html"><ion-icon name="call-outline"></ion-icon> Contact Us</a></li>
+        <li><a href="FAQ.html"><ion-icon name="help-circle-outline"></ion-icon> FAQs</a></li>
+        <li><a href="main.html"><ion-icon name="home-outline"></ion-icon> Calories Coach</a></li>
+      </ul>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <div class="footer-note">
+        <p>&copy; 2024 Calories Coach. All rights reserved.</p>
+        <p>Empowering healthy lifestyles through technology and care.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Section</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        header {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #1d7ab5;
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Exercise Section */
+        h1 {
+            text-align: center;
+        }
+
+        .exercise {
+            padding: 2em;
+            margin: 1em 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 1em;
+            width: 200px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* Navigation Bar Styling */
+        nav {
+            margin-top: 20px;
+            background-color: #2c3e50;
+            border-radius: 10px;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+     /* Navigation Bar Styling */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none; /* Ensure no box-shadow */
+    text-shadow: none; /* Ensure no text-shadow */
+}
+
+nav ul li a:hover {
+    color: #e74c3c; /* Change text color on hover */
+    border-bottom: 2px solid #e74c3c; /* Add underline effect */
+    box-shadow: none; /* Ensure no shadow on hover */
+}
+        
+
+        /* Footer Styling */
+        footer {
+            background-color: #002a38;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer ul li {
+            position: relative;
+        }
+
+        footer ul li p {
+            margin: 0;
+            font-size: 1.5rem;
+            animation: wave-animation 0.3s infinite;
+        }
+
+        footer ul li:hover ~ li p {
+            animation: none;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+        }
+
+        a:hover {
+            box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+        }
+
+        @keyframes wave-animation {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(20deg);
+            }
+            75% {
+                transform: rotate(-15deg);
+            }
+        }
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Exercise</h1>
+        <p>Discover the benefits of different exercises for a healthier lifestyle</p>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#Cardio">Cardio</a></li>
+            <li><a href="#Strength-Training">Strength Training</a></li>
+            <li><a href="#Flexibility">Flexibility</a></li>
+            <li><a href="#Balance">Balance</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Exercises</h1>
+
+        <!-- Cardio Section -->
+        <div id="Cardio" class="exercise">
+            <h2>Cardio</h2>
+            <img src="f1.jpg" alt="Cardio Exercise" />
+            <p><strong>Benefits:</strong> Improves cardiovascular health, burns calories, and boosts mood.</p>
+            <p><strong>Age Limit:</strong> All ages</p>
+            <p><strong>Duration:</strong> 30-60 minutes</p>
+            <p><strong>Equipment:</strong> None, or optional treadmill, jump rope, or stationary bike</p>
+            <p><strong>Instructions:</strong> Engage in activities like brisk walking, jogging, cycling, or dancing. Maintain a steady pace to keep your heart rate elevated.</p>
+        </div>
+
+        <!-- Strength Training Section -->
+        <div id="Strength-Training" class="exercise">
+            <h2>Strength Training</h2>
+            <img src="f2.jpg" alt="Strength Training" />
+            <p><strong>Benefits:</strong> Increases muscle mass, strengthens bones, and improves metabolism.</p>
+            <p><strong>Age Limit:</strong> 18+</p>
+            <p><strong>Duration:</strong> 20-40 minutes</p>
+            <p><strong>Equipment:</strong> Dumbbells, resistance bands, or body weight</p>
+            <p><strong>Instructions:</strong> Perform exercises like squats, lunges, push-ups, and deadlifts. Focus on controlled movements and proper form.</p>
+        </div>
+
+        <!-- Flexibility Section -->
+        <div id="Flexibility" class="exercise">
+            <h2>Flexibility</h2>
+            <img src="f3.jpg" alt="Flexibility Exercises" />
+            <p><strong>Benefits:</strong> Enhances range of motion, reduces injury risk, and improves posture.</p>
+            <p><strong>Age Limit:</strong> All ages</p>
+            <p><strong>Duration:</strong> 10-20 minutes</p>
+            <p><strong>Equipment:</strong> Yoga mat (optional)</p>
+            <p><strong>Instructions:</strong> Stretch major muscle groups, hold each stretch for 20-30 seconds, and avoid bouncing.</p>
+        </div>
+
+        <!-- Balance Section -->
+        <div id="Balance" class="exercise">
+            <h2>Balance</h2>
+            <img src="f4.jpg" alt="Balance Exercises" />
+            <p><strong>Benefits:</strong> Improves stability, coordination, and prevents falls.</p>
+            <p><strong>Age Limit:</strong> All ages</p>
+            <p><strong>Duration:</strong> 10-15 minutes</p>
+            <p><strong>Equipment:</strong> None, or optional stability ball</p>
+            <p><strong>Instructions:</strong> Try exercises like standing on one leg, heel-to-toe walking, or using a stability ball to challenge your balance.</p>
+        </div>
+
+    </div>
+    <footer>
+        <ul>
+            <li><a href="aboutus.html"><ion-icon name="information-circle-outline"></ion-icon> About Us</a></li>
+            <li><a href="contact us.html"><ion-icon name="call-outline"></ion-icon> Contact Us</a></li>
+            <li><a href="FAQ.html"><ion-icon name="help-circle-outline"></ion-icon> FAQs</a></li>
+            <li><a href="main.html"><ion-icon name="home-outline"></ion-icon> Calories Coach</a></li>
+            <li><p>👋</p></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

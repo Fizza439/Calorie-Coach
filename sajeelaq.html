@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions - CaloriesCoach</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan-page {
+            position: fixed;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.5s ease-in-out;
+            z-index: 100;
+        }
+
+        .plan-page.show {
+            transform: translateY(-100%);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .plan-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="goal-title"></h1>
+        <form id="questions-form">
+            <label for="age">Your Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            <label for="weight">Your Current Weight (kg)</label>
+            <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
+            <label for="height">Your Height (cm)</label>
+            <input type="number" id="height" name="height" placeholder="Enter your height" required>
+            <label for="activity-level">Activity Level</label>
+            <select id="activity-level" name="activity-level" required>
+                <option value="sedentary">Sedentary (little or no exercise)</option>
+                <option value="light">Lightly active (light exercise/sports 1-3 days a week)</option>
+                <option value="moderate">Moderately active (moderate exercise/sports 3-5 days a week)</option>
+                <option value="active">Active (hard exercise/sports 6-7 days a week)</option>
+            </select>
+            <button type="button" onclick="generatePlan()">Generate Plan</button>
+        </form>
+    </div>
+    <div id="plan-page" class="plan-page">
+        <div class="plan-content">
+            <h1>Your Personalized Plan</h1>
+            <p id="plan-output"></p>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+    <script>
+        // Get the goal from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const goal = urlParams.get('goal');
+        document.getElementById('goal-title').textContent = `Questions for ${goal}`;
+
+        // Show plan page with transition
+        function generatePlan() {
+            const age = document.getElementById('age').value;
+            const weight = document.getElementById('weight').value;
+            const height = document.getElementById('height').value;
+            const activityLevel = document.getElementById('activity-level').value;
+
+            if (age && weight && height && activityLevel) {
+                let plan = '';
+                if (goal === 'Weight Loss') {
+                    plan += `To lose weight, you should aim to create a calorie deficit of 500-1000 calories per day through a combination of diet and exercise. Based on your age of ${age} years, your weight of ${weight} kg, and height of ${height} cm, along with your activity level of ${activityLevel}, you can expect to see progress within a few weeks if you follow the plan consistently.`;
+                } else if (goal === 'Muscle Gain') {
+                    plan += `To gain muscle, you should aim for a calorie surplus, eating about 250-500 extra calories per day. Combining this with strength training exercises and a protein-rich diet will help you build muscle. At ${age} years old, weighing ${weight} kg and being ${height} cm tall with an activity level of ${activityLevel}, your progress should be noticeable within a few months.`;
+                } else if (goal === 'Maintenance') {
+                    plan += `To maintain your current weight, you should aim to eat roughly the same amount of calories as you burn. With your age of ${age} years, weight of ${weight} kg, and height of ${height} cm, combined with your ${activityLevel} activity level, your daily calorie needs can be calculated to keep your weight stable.`;
+                }
+
+                document.getElementById('plan-output').textContent = plan;
+                document.getElementById('plan-page').classList.add('show');
+            }
+        }
+
+        // Go back to the form
+        function goBack() {
+            document.getElementById('plan-page').classList.remove('show');
+        }
+    </script>
+</body>
+</html>

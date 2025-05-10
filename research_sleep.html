@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Research</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1d7ab5;
+            color: #fff;
+            border-radius: 8px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .research-list {
+            margin: 20px 0;
+        }
+        .research-paper {
+            margin: 15px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fefefe;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .research-paper:hover {
+            transform: translateY(-5px);
+        }
+        .research-paper h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+            color: #1d7ab5;
+        }
+        .research-paper p {
+            font-size: 14px;
+            margin: 0;
+            color: #555;
+        }
+        .research-paper a {
+            color: #1d7ab5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .research-paper a:hover {
+            text-decoration: underline;
+        }
+       /* Footer Styling */
+       footer {
+        background-color: #002a38;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer ul li {
+        position: relative;
+    }
+
+    footer ul li p {
+        margin: 0;
+        font-size: 1.5rem;
+        animation: wave-animation 0.3s infinite;
+    }
+
+    footer ul li:hover ~ li p {
+        animation: none;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+    }
+
+    a:hover {
+        box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+    }
+
+    @keyframes wave-animation {
+        0%, 100% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(20deg);
+        }
+        75% {
+            transform: rotate(-15deg);
+        }
+    }
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Mental & Physical Health Research Papers</h1>
+    </header>
+    <div class="container">
+         <div class="research-list">
+            <div class="research-paper">
+                <h2><a href="https://pubmed.ncbi.nlm.nih.gov/31007902/" target="_blank">The Impact of Physical Activity on Mental Health</a></h2>
+                <p>Explores how regular exercise improves mood, reduces anxiety, and combats depression through neurochemical changes in the brain.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6342071/" target="_blank">Physical Activity and Healthy Aging</a></h2>
+                <p>Discusses how exercise prevents age-related mental decline and promotes better physical health among older adults.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2018.00458/full" target="_blank">Mindfulness Meditation and Mental Health</a></h2>
+                <p>Explores how mindfulness practices can reduce stress, enhance emotional regulation, and boost overall mental well-being.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5769920/" target="_blank">Exercise and Brain Plasticity</a></h2>
+                <p>Examines how physical activity promotes brain plasticity, enhances memory, and protects against cognitive decline.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.sciencedirect.com/science/article/abs/pii/S2352721819302080" target="_blank">Sleep and Its Role in Physical Recovery</a></h2>
+                <p>Highlights the importance of quality sleep in muscle recovery, injury prevention, and hormonal balance for athletes and active individuals.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://academic.oup.com/sleep/article/40/1/zsw001/2669486" target="_blank">Effects of Sleep on Cognitive Function</a></h2>
+                <p>Examines how sleep duration and quality impact memory, decision-making, and overall cognitive health.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469057/" target="_blank">The Role of Aerobic Exercise in Cardiovascular and Mental Health</a></h2>
+                <p>Discusses how aerobic activities improve heart health and simultaneously reduce stress and anxiety levels.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="aboutus.html"><ion-icon name="information-circle-outline"></ion-icon> About Us</a></li>
+        <li><a href="contact us.html"><ion-icon name="call-outline"></ion-icon> Contact Us</a></li>
+        <li><a href="FAQ.html"><ion-icon name="help-circle-outline"></ion-icon> FAQs</a></li>
+        <li><a href="main.html"><ion-icon name="home-outline"></ion-icon> Calories Coach</a></li>
+            <li><p>👋</p></li>
+        </ul>
+    </footer>
+</body>
+</html>

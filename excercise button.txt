@@ -1,0 +1,109 @@
+[11:38 AM, 11/29/2024] M Faizan: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaloriesCoach - Exercises for Weight Loss</title>
+    <link rel="stylesheet" href="exerciseStyle.css">
+</head>
+<body>
+
+    
+
+    <header>
+        <h1>Exercises for Weight Loss</h1>
+        <p>Discover different types of exercises to help you lose weight effectively.</p>
+    </header>
+
+    <!-- <div class="exercise-images">
+        <img src="/E1.jpeg" alt="Person doing exercise">
+        <img src="/E2.jpg" alt="Person doing exercise">
+        <img src="/E3.avif" alt="Person doing exercise">
+    </div> -->
+    
+    <section class="exercise" id="cardio">
+        <h2>Cardio Exercises</h2>
+        <ul>
+          …
+[11:39 AM, 11/29/2024] M Faizan: /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    text-align: center;
+    padding: 2em;
+    background-image: url('/E2.jpg'); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay with slight transparency */
+    backdrop-filter: blur(5px); /* Apply a blur effect */
+    z-index: 1;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 2;
+}
+
+.exercise {
+    padding: 2em;
+    margin: 1em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exercise h2 {
+    color: #ff5722;
+}
+
+.exercise ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.exercise ul li {
+    background: #ffebee;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.exercise-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.exercise-images img {
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.exercise-images img:hover {
+    transform: translateY(-10px);
+}
+
+/* Highlight CSS */
+.highlight {
+    border: 2px solid #ff5722;
+}

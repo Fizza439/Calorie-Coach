@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Research</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1d7ab5;
+            color: #fff;
+            border-radius: 8px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .research-list {
+            margin: 20px 0;
+        }
+        .research-paper {
+            margin: 15px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fefefe;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .research-paper:hover {
+            transform: translateY(-5px);
+        }
+        .research-paper h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+            color: #1d7ab5;
+        }
+        .research-paper p {
+            font-size: 14px;
+            margin: 0;
+            color: #555;
+        }
+        .research-paper a {
+            color: #1d7ab5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .research-paper a:hover {
+            text-decoration: underline;
+        }
+       /* Footer Styling */
+       footer {
+        background-color: #002a38;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer ul li {
+        position: relative;
+    }
+
+    footer ul li p {
+        margin: 0;
+        font-size: 1.5rem;
+        animation: wave-animation 0.3s infinite;
+    }
+
+    footer ul li:hover ~ li p {
+        animation: none;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+    }
+
+    a:hover {
+        box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+    }
+
+    @keyframes wave-animation {
+        0%, 100% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(20deg);
+        }
+        75% {
+            transform: rotate(-15deg);
+        }
+    }
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Exercise & Yoga Research Papers</h1>
+    </header>
+    <div class="container">
+        <div class="research-list">
+            <div class="research-paper">
+                <h2><a href="https://pubmed.ncbi.nlm.nih.gov/31007902/" target="_blank">The Role of Exercise in Weight Management</a></h2>
+                <p>Explores how physical activity contributes to weight loss and maintenance. Discusses optimal exercise strategies for calorie control and overall health benefits.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5814090/" target="_blank">Effects of Physical Activity on Metabolic Health</a></h2>
+                <p>This paper highlights the significant impact of regular physical activity on metabolic markers, including blood sugar regulation and fat metabolism.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469057/" target="_blank">Exercise and Cardiovascular Health</a></h2>
+                <p>Examines how exercise improves cardiovascular function and reduces the risk of heart disease. Details the role of aerobic exercises in improving heart health.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.sciencedirect.com/science/article/abs/pii/S2352721817301289" target="_blank">Impact of Resistance Exercise on Weight Loss</a></h2>
+                <p>Discusses the role of resistance training in body composition and its ability to enhance calorie burning even during rest periods. Focuses on muscle growth and fat loss.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6342071/" target="_blank">Physical Activity and Healthy Aging</a></h2>
+                <p>Explores how regular exercise contributes to aging healthily by reducing the effects of sarcopenia, osteoporosis, and other age-related conditions.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://pubmed.ncbi.nlm.nih.gov/28235463/" target="_blank">Yoga for Mental Health: Effects on Stress and Anxiety</a></h2>
+                <p>Highlights the role of yoga in reducing stress, anxiety, and promoting mental well-being. Discusses the psychological mechanisms behind yoga's effects on the brain and mood.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3193654/" target="_blank">Impact of Yoga and Exercise on Cardiovascular Health</a></h2>
+                <p>Explores how yoga and other physical exercises contribute to cardiovascular health by reducing blood pressure, cholesterol, and heart disease risk factors.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://pubmed.ncbi.nlm.nih.gov/29954432/" target="_blank">The Benefits of Yoga on Musculoskeletal Health</a></h2>
+                <p>Investigates the role of yoga in improving musculoskeletal health, reducing joint pain, and enhancing flexibility and balance.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3768220/" target="_blank">The Role of Yoga in Managing Chronic Pain</a></h2>
+                <p>Focuses on the effects of yoga as an alternative therapy for managing chronic pain conditions such as back pain and arthritis.</p>
+            </div>
+            <div class="research-paper">
+                <h2><a href="https://pubmed.ncbi.nlm.nih.gov/26961843/" target="_blank">Yoga, Physical Exercise, and Their Effects on Sleep Quality</a></h2>
+                <p>Analyzes the impact of both yoga and physical exercise on improving sleep quality and treating insomnia. Emphasizes how relaxation and physical fatigue contribute to better sleep.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="aboutus.html"><ion-icon name="information-circle-outline"></ion-icon> About Us</a></li>
+        <li><a href="contact us.html"><ion-icon name="call-outline"></ion-icon> Contact Us</a></li>
+        <li><a href="FAQ.html"><ion-icon name="help-circle-outline"></ion-icon> FAQs</a></li>
+        <li><a href="main.html"><ion-icon name="home-outline"></ion-icon> Calories Coach</a></li>
+            <li><p>👋</p></li>
+        </ul>
+    </footer>
+</body>
+</html>
