@@ -1,2 +1,4 @@
 # Calorie-Coach
-Calorie Coach is a comprehensive web tool that helps users calculate their BMI, BMR, BFR, ideal body weight, and daily calorie requirements. It also provides food suggestions, and informative pages on diet, exercise, sleep, and healthcare, all developed using HTML, CSS, JavaScript, and PHP.
+Calorie Coach is an all-in-one web platform designed to help users manage their health and fitness goals. The website features a robust calculator that calculates key health metrics such as Body Mass Index (BMI), Basal Metabolic Rate (BMR), Body Fat Ratio (BFR), ideal body weight, and daily calorie needs. In addition to the calculators, the website provides tailored food suggestions to help users meet their nutritional goals.
+
+It also includes informative sections on diet, exercise, sleep, and healthcare to guide users in making healthy lifestyle choices. The site contains essential features such as About Us, Contact Us, and FAQs to support user engagement and provide a seamless experience. Built using HTML, CSS, JavaScript, and PHP, Calorie Coach is an interactive and user-friendly web application focused on promoting wellness.
